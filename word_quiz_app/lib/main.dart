@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -113,8 +114,46 @@ class _QuizPageState extends State<QuizPage> {
   bool answered = false;
   bool quizFinished = false;
 
+  static const int _totalTime = 15;
+  int _timeLeft = _totalTime;
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _startTimer();
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  void _startTimer() {
+    _timer?.cancel();
+    _timeLeft = _totalTime;
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_timeLeft == 0) {
+        timer.cancel();
+        if (!answered) {
+          setState(() {
+            answered = true;
+            selectedAnswer = null;
+          });
+          Future.delayed(const Duration(seconds: 1), nextQuestion);
+        }
+      } else {
+        setState(() {
+          _timeLeft--;
+        });
+      }
+    });
+  }
+
   void checkAnswer(String option) {
     if (answered) return;
+    _timer?.cancel();
     setState(() {
       selectedAnswer = option;
       answered = true;
@@ -131,7 +170,9 @@ class _QuizPageState extends State<QuizPage> {
         selectedAnswer = null;
         answered = false;
       });
+      _startTimer();
     } else {
+      _timer?.cancel();
       setState(() {
         quizFinished = true;
       });
@@ -146,6 +187,7 @@ class _QuizPageState extends State<QuizPage> {
       answered = false;
       quizFinished = false;
     });
+    _startTimer();
   }
 
   Color getOptionColor(String option) {
@@ -221,7 +263,34 @@ class _QuizPageState extends State<QuizPage> {
               backgroundColor: Colors.grey.shade300,
               color: Colors.deepPurple,
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 20),
+            // Timer
+            Center(
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  SizedBox(
+                    width: 60,
+                    height: 60,
+                    child: CircularProgressIndicator(
+                      value: _timeLeft / _totalTime,
+                      strokeWidth: 5,
+                      backgroundColor: Colors.grey.shade300,
+                      color: _timeLeft <= 5 ? Colors.red : Colors.deepPurple,
+                    ),
+                  ),
+                  Text(
+                    '$_timeLeft',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: _timeLeft <= 5 ? Colors.red : Colors.deepPurple,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
             // Question
             Container(
               padding: const EdgeInsets.all(20),
