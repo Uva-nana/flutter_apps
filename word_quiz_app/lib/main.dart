@@ -28,6 +28,7 @@ final Map<String, int> _highScores = {};
 // ── Question bank ────────────────────────────────────────────────
 final Map<String, List<Map<String, dynamic>>> _questionBank = {
   'Flutter': [
+    // Easy
     {
       'question': 'What language does Flutter use?',
       'options': ['Python', 'Dart', 'Java', 'Kotlin'],
@@ -58,6 +59,7 @@ final Map<String, List<Map<String, dynamic>>> _questionBank = {
       'answer': 'Row',
       'difficulty': 'Easy',
     },
+    // Medium
     {
       'question': 'What is a Widget in Flutter?',
       'options': ['A database', 'A network request', 'A building block of UI', 'A programming language'],
@@ -77,6 +79,19 @@ final Map<String, List<Map<String, dynamic>>> _questionBank = {
       'difficulty': 'Medium',
     },
     {
+      'question': 'Which widget is used to scroll content in Flutter?',
+      'options': ['Column', 'Row', 'ListView', 'Stack'],
+      'answer': 'ListView',
+      'difficulty': 'Medium',
+    },
+    {
+      'question': 'What does setState() do in Flutter?',
+      'options': ['Saves data to storage', 'Rebuilds the widget with new data', 'Connects to the internet', 'Closes the app'],
+      'answer': 'Rebuilds the widget with new data',
+      'difficulty': 'Medium',
+    },
+    // Hard
+    {
       'question': 'What is hot reload in Flutter?',
       'options': ['Restart the device', 'Rebuild app from scratch', 'Apply code changes instantly without losing state', 'Clear app cache'],
       'answer': 'Apply code changes instantly without losing state',
@@ -88,8 +103,27 @@ final Map<String, List<Map<String, dynamic>>> _questionBank = {
       'answer': 'Managing app dependencies and assets',
       'difficulty': 'Hard',
     },
+    {
+      'question': 'What is the purpose of the BuildContext in Flutter?',
+      'options': ['Store app data', 'Handle network requests', 'Locate widget position in the widget tree', 'Manage animations'],
+      'answer': 'Locate widget position in the widget tree',
+      'difficulty': 'Hard',
+    },
+    {
+      'question': 'What does the Navigator do in Flutter?',
+      'options': ['Styles the app', 'Manages a stack of screens/routes', 'Fetches data from the internet', 'Handles device sensors'],
+      'answer': 'Manages a stack of screens/routes',
+      'difficulty': 'Hard',
+    },
+    {
+      'question': 'What is a Future in Dart?',
+      'options': ['A past value', 'A widget type', 'A value that will be available later', 'A layout widget'],
+      'answer': 'A value that will be available later',
+      'difficulty': 'Hard',
+    },
   ],
   'Python': [
+    // Easy
     {
       'question': 'Which keyword defines a function in Python?',
       'options': ['func', 'def', 'function', 'define'],
@@ -103,7 +137,7 @@ final Map<String, List<Map<String, dynamic>>> _questionBank = {
       'difficulty': 'Easy',
     },
     {
-      'question': 'Which of these creates a list?',
+      'question': 'Which of these creates a list in Python?',
       'options': ['{}', '()', '[]', '<>'],
       'answer': '[]',
       'difficulty': 'Easy',
@@ -115,11 +149,12 @@ final Map<String, List<Map<String, dynamic>>> _questionBank = {
       'difficulty': 'Easy',
     },
     {
-      'question': 'What does len() do?',
+      'question': 'What does len() do in Python?',
       'options': ['Converts to lowercase', 'Returns the length', 'Deletes a variable', 'Loops through a list'],
       'answer': 'Returns the length',
       'difficulty': 'Easy',
     },
+    // Medium
     {
       'question': 'Which keyword is used for a loop in Python?',
       'options': ['loop', 'repeat', 'for', 'iterate'],
@@ -139,6 +174,19 @@ final Map<String, List<Map<String, dynamic>>> _questionBank = {
       'difficulty': 'Medium',
     },
     {
+      'question': 'What does the "range(5)" produce?',
+      'options': ['Numbers 1 to 5', 'Numbers 0 to 4', 'Numbers 0 to 5', 'Numbers 1 to 4'],
+      'answer': 'Numbers 0 to 4',
+      'difficulty': 'Medium',
+    },
+    {
+      'question': 'How do you add a comment in Python?',
+      'options': ['// comment', '/* comment */', '# comment', '-- comment'],
+      'answer': '# comment',
+      'difficulty': 'Medium',
+    },
+    // Hard
+    {
       'question': 'What does "if __name__ == \'__main__\':" do?',
       'options': ['Imports a module', 'Runs code only when file is executed directly', 'Defines a class', 'Creates a loop'],
       'answer': 'Runs code only when file is executed directly',
@@ -150,66 +198,117 @@ final Map<String, List<Map<String, dynamic>>> _questionBank = {
       'answer': 'A shorthand to create lists using a loop',
       'difficulty': 'Hard',
     },
-  ],
-  'General': [
     {
-      'question': 'What does HTML stand for?',
-      'options': ['Hyper Text Markup Language', 'High Tech Modern Language', 'Home Tool Markup Language', 'Hyperlink Text Method Language'],
-      'answer': 'Hyper Text Markup Language',
-      'difficulty': 'Easy',
-    },
-    {
-      'question': 'What does CSS stand for?',
-      'options': ['Computer Style Sheets', 'Cascading Style Sheets', 'Creative Style System', 'Colorful Style Sheets'],
-      'answer': 'Cascading Style Sheets',
-      'difficulty': 'Easy',
-    },
-    {
-      'question': 'What is a bug in programming?',
-      'options': ['An insect in the computer', 'An error in the code', 'A feature request', 'A type of loop'],
-      'answer': 'An error in the code',
-      'difficulty': 'Easy',
-    },
-    {
-      'question': 'What does API stand for?',
-      'options': ['App Programming Interface', 'Application Programming Interface', 'Advanced Program Integration', 'Automated Program Interface'],
-      'answer': 'Application Programming Interface',
-      'difficulty': 'Easy',
-    },
-    {
-      'question': 'What is GitHub used for?',
-      'options': ['Video editing', 'Storing and sharing code', 'Playing games', 'Making websites only'],
-      'answer': 'Storing and sharing code',
-      'difficulty': 'Easy',
-    },
-    {
-      'question': 'What does UI stand for?',
-      'options': ['Universal Interface', 'User Interface', 'Unique Interaction', 'Unified Input'],
-      'answer': 'User Interface',
-      'difficulty': 'Medium',
-    },
-    {
-      'question': 'What is a database?',
-      'options': ['A type of computer', 'An organized collection of data', 'A programming language', 'A web browser'],
-      'answer': 'An organized collection of data',
-      'difficulty': 'Medium',
-    },
-    {
-      'question': 'What does UX stand for?',
-      'options': ['User Experience', 'Universal Exchange', 'Unique Extension', 'User Extension'],
-      'answer': 'User Experience',
-      'difficulty': 'Medium',
-    },
-    {
-      'question': 'What is open source software?',
-      'options': ['Software that costs money', 'Software whose source code is freely available', 'Software made by one company', 'Software only for developers'],
-      'answer': 'Software whose source code is freely available',
+      'question': 'What is a lambda function in Python?',
+      'options': ['A class method', 'A built-in function', 'A small anonymous function', 'A loop shortcut'],
+      'answer': 'A small anonymous function',
       'difficulty': 'Hard',
     },
     {
-      'question': 'What is the purpose of version control?',
-      'options': ['Speed up computers', 'Track and manage changes to code over time', 'Design user interfaces', 'Test software automatically'],
-      'answer': 'Track and manage changes to code over time',
+      'question': 'What does the "self" keyword mean in a Python class?',
+      'options': ['Refers to the module', 'Refers to the current instance of the class', 'Creates a new object', 'Imports a library'],
+      'answer': 'Refers to the current instance of the class',
+      'difficulty': 'Hard',
+    },
+    {
+      'question': 'What is the difference between a list and a tuple?',
+      'options': ['No difference', 'Tuples are faster only', 'Lists are mutable, tuples are immutable', 'Tuples can only hold numbers'],
+      'answer': 'Lists are mutable, tuples are immutable',
+      'difficulty': 'Hard',
+    },
+  ],
+  'General': [
+    // Easy
+    {
+      'question': 'What is the largest planet in our solar system?',
+      'options': ['Earth', 'Saturn', 'Jupiter', 'Neptune'],
+      'answer': 'Jupiter',
+      'difficulty': 'Easy',
+    },
+    {
+      'question': 'How many continents are there on Earth?',
+      'options': ['5', '6', '7', '8'],
+      'answer': '7',
+      'difficulty': 'Easy',
+    },
+    {
+      'question': 'What is the chemical symbol for water?',
+      'options': ['WA', 'H2O', 'HO2', 'W2O'],
+      'answer': 'H2O',
+      'difficulty': 'Easy',
+    },
+    {
+      'question': 'Which planet is closest to the Sun?',
+      'options': ['Venus', 'Mars', 'Earth', 'Mercury'],
+      'answer': 'Mercury',
+      'difficulty': 'Easy',
+    },
+    {
+      'question': 'What gas do plants absorb from the air?',
+      'options': ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Hydrogen'],
+      'answer': 'Carbon dioxide',
+      'difficulty': 'Easy',
+    },
+    // Medium
+    {
+      'question': 'Who developed the theory of relativity?',
+      'options': ['Isaac Newton', 'Albert Einstein', 'Nikola Tesla', 'Stephen Hawking'],
+      'answer': 'Albert Einstein',
+      'difficulty': 'Medium',
+    },
+    {
+      'question': 'What is the powerhouse of the cell?',
+      'options': ['Nucleus', 'Ribosome', 'Mitochondria', 'Chloroplast'],
+      'answer': 'Mitochondria',
+      'difficulty': 'Medium',
+    },
+    {
+      'question': 'Which country has the largest population in the world?',
+      'options': ['USA', 'India', 'China', 'Russia'],
+      'answer': 'India',
+      'difficulty': 'Medium',
+    },
+    {
+      'question': 'What is the speed of light approximately?',
+      'options': ['300,000 km/s', '150,000 km/s', '450,000 km/s', '100,000 km/s'],
+      'answer': '300,000 km/s',
+      'difficulty': 'Medium',
+    },
+    {
+      'question': 'What is the longest river in the world?',
+      'options': ['Amazon', 'Yangtze', 'Mississippi', 'Nile'],
+      'answer': 'Nile',
+      'difficulty': 'Medium',
+    },
+    // Hard
+    {
+      'question': 'What is the atomic number of carbon?',
+      'options': ['4', '6', '8', '12'],
+      'answer': '6',
+      'difficulty': 'Hard',
+    },
+    {
+      'question': 'Who was the first human to travel to space?',
+      'options': ['Neil Armstrong', 'Buzz Aldrin', 'Yuri Gagarin', 'Alan Shepard'],
+      'answer': 'Yuri Gagarin',
+      'difficulty': 'Hard',
+    },
+    {
+      'question': 'What is the name of the force that keeps planets in orbit around the Sun?',
+      'options': ['Magnetic force', 'Nuclear force', 'Gravitational force', 'Centrifugal force'],
+      'answer': 'Gravitational force',
+      'difficulty': 'Hard',
+    },
+    {
+      'question': 'What is the hardest natural substance on Earth?',
+      'options': ['Gold', 'Iron', 'Diamond', 'Quartz'],
+      'answer': 'Diamond',
+      'difficulty': 'Hard',
+    },
+    {
+      'question': 'How many bones are in the adult human body?',
+      'options': ['196', '206', '216', '226'],
+      'answer': '206',
       'difficulty': 'Hard',
     },
   ],
@@ -217,9 +316,10 @@ final Map<String, List<Map<String, dynamic>>> _questionBank = {
 
 List<Map<String, dynamic>> _getQuestions(String category, String difficulty) {
   final all = _questionBank[category]!;
-  if (difficulty == 'Easy') return all.where((q) => q['difficulty'] == 'Easy').toList();
-  if (difficulty == 'Medium') return all.where((q) => q['difficulty'] != 'Hard').toList();
-  return all;
+  List<Map<String, dynamic>> filtered;
+  filtered = all.where((q) => q['difficulty'] == difficulty).toList();
+  filtered.shuffle();
+  return filtered;
 }
 
 // ── Shared UI helpers ────────────────────────────────────────────
@@ -263,9 +363,14 @@ class MyApp extends StatelessWidget {
 // ════════════════════════════════════════════════════════════════
 // HOME SCREEN — category selection
 // ════════════════════════════════════════════════════════════════
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final categories = [
@@ -309,7 +414,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(builder: (_) => DifficultyScreen(category: cat['name'] as String)),
-                      ),
+                      ).then((_) => setState(() {})),
                       child: glassCard(
                         padding: const EdgeInsets.all(20),
                         child: Row(
@@ -483,7 +588,12 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
   @override
   void initState() {
     super.initState();
-    questions = _getQuestions(widget.category, widget.difficulty);
+    questions = _getQuestions(widget.category, widget.difficulty)
+        .map((q) {
+          final opts = List<String>.from(q['options'])..shuffle();
+          return {...q, 'options': opts};
+        })
+        .toList();
     _fadeCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 350));
     _fadeAnim = CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeIn);
     _fadeCtrl.forward();
