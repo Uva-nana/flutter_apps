@@ -17,6 +17,12 @@ A Flutter-based multiple choice quiz app with categories, difficulty levels, a c
 
 ---
 
+## Live Demo
+
+Try the app here: [https://quizapp-b3f13.web.app](https://quizapp-b3f13.web.app)
+
+---
+
 ## Screenshots
 
 > *(Add screenshots here)*
