@@ -1,5 +1,7 @@
 # 📝 Word Quiz App                                                                                                                                                                                                                                                                                                  
-  A fun and interactive multiple-choice quiz app built with Flutter. Test your knowledge in Flutter, Python, and General topics — with a timer, score        tracking, and detailed result review.                                                                                                                                                                                                                                                                                 ---                                                                                                                                                      
+  A fun and interactive multiple-choice quiz app built with Flutter. Test your knowledge in Flutter, Python, and General topics — with a timer, score        tracking, and detailed result review.  
+  Try the app here: [https://quizapp-b3f13.web.app](https://quizapp-b3f13.web.app)
+  ---                                                                                                                                                      
                                                                                                                                                            
   ## ✨ Features
 
